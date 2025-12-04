@@ -1,0 +1,173 @@
+﻿#############################
+# CULTIVATION INTERACTIONS
+#############################
+
+teach_cultivation_interaction = { 
+    icon = icon_combat
+    category = interaction_category_friendly
+    interface_priority = 90
+    
+    desc = teach_cultivation_interaction_desc
+    use_diplomatic_range = yes
+
+    ai_will_do = {
+        value = 5
+
+        # FAMILY PRIORITY
+        modifier = {
+            add = 50
+            scope:recipient = { is_close_family_of = scope:actor }
+        }
+        modifier = {
+            add = 35
+            scope:recipient = { is_extended_family_of = scope:actor }
+        }
+
+        # MERIDIAN QUALITY
+        modifier = { add = 45 scope:recipient = { has_trait = heavenly_meridians } }
+        modifier = { add = 35 scope:recipient = { has_trait = good_meridians } }
+        modifier = { add = 20 scope:recipient = { has_trait = normal_meridians } }
+
+        # POOR MERIDIAN — FAMILY ONLY
+        modifier = {
+            add = 10
+            scope:recipient = {
+                has_trait = poor_meridians
+                is_close_family_of = scope:actor
+            }
+        }
+
+        # COURTIERS (NO POOR MERIDIAN)
+        modifier = {
+            add = 20
+            scope:recipient = {
+                is_courtier_of = scope:actor
+                OR = {
+                    has_trait = heavenly_meridians
+                    has_trait = good_meridians
+                    has_trait = normal_meridians
+                }
+            }
+        }
+
+        # FRIENDS
+        modifier = { add = 25 scope:recipient = { has_relation_friend = scope:actor } }
+
+        # ALREADY KNOWS QI GATHERING
+        modifier = { add = -200 scope:recipient = { has_trait = qi_gathering } }
+    }
+
+    ai_accept = { value = 100 }
+
+    is_shown = {
+        NOT = { scope:recipient = scope:actor }
+
+        scope:actor = {
+            is_alive = yes
+            has_trait = cultivation_realm
+        }
+
+        scope:recipient = {
+            is_alive = yes
+            NOT = { has_trait = qi_gathering }
+        }
+
+        is_valid_showing_failures_only = {
+            scope:actor = { has_trait = cultivation_realm }
+            scope:recipient = {
+                NOT = { has_trait = qi_gathering }
+                is_alive = yes
+            }
+        }
+    }
+    
+    on_accept = {
+        scope:actor = { save_scope_as = actor_target }
+        
+        scope:recipient = {
+            save_scope_as = recipient_target
+            add_trait = qi_gathering
+            set_relation_potential_friend = scope:actor_target
+            add_opinion = {
+                target = scope:actor
+                modifier = taught_me_cultivation_opinion
+            }
+        }
+    }
+    
+    auto_accept = { always = yes }
+}
+
+
+
+#####################################
+# REQUEST TEACHING INTERACTION
+#####################################
+
+request_teach_cultivation_interaction = {
+    icon = icon_combat
+    category = interaction_category_friendly
+    interface_priority = 89
+    
+    desc = request_teach_cultivation_interaction_desc
+    use_diplomatic_range = yes
+
+    ai_will_do = {
+        value = 3
+
+        # FAMILY
+        modifier = { add = 40 scope:recipient = { is_close_family_of = scope:actor } }
+        modifier = { add = 25 scope:recipient = { is_extended_family_of = scope:actor } }
+
+        # ADMIRATION OF MASTER
+        modifier = {
+            add = 20
+            scope:recipient = { opinion = { target = scope:actor value >= 30 } }
+        }
+
+        # MASTER QUALITY
+        modifier = { add = 35 scope:recipient = { has_trait = heavenly_meridians } }
+    }
+
+    ai_accept = { value = 100 }
+    
+    is_shown = {
+        NOT = { scope:recipient = scope:actor }
+        
+        scope:actor = {
+            is_alive = yes
+            NOT = { has_trait = cultivation_realm }
+        }
+        
+        scope:recipient = {
+            is_alive = yes
+            has_trait = cultivation_realm
+        }
+        
+        is_valid_showing_failures_only = {
+            scope:actor = { NOT = { has_trait = cultivation_realm } }
+            scope:recipient = {
+                has_trait = cultivation_realm
+                is_alive = yes
+            }
+        }
+    }
+    
+    on_accept = {
+        scope:actor = {
+            add_trait = qi_gathering
+            add_opinion = {
+                target = scope:recipient
+                modifier = taught_me_cultivation_opinion
+            }
+        }
+        scope:recipient = {
+            add_opinion = {
+                target = scope:actor
+                modifier = taught_them_cultivation_opinion
+            }
+        }
+    }
+    
+    auto_accept = { always = yes }
+}

@@ -1,0 +1,76 @@
+﻿create_qi_gathering_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = qi_gathering
+}
+
+create_foundation_establishment_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = foundation_establishment
+}
+
+create_core_formation_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = core_formation
+}
+
+create_nascent_soul_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = nascent_soul
+}
+
+create_spirit_severing_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = spirit_severing
+}
+
+create_dao_seeking_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = dao_seeking
+}
+
+create_immortal_ascension_cultivator = {
+    create_character = {
+        female = no
+        location = root.location
+        save_scope_as = cultivator
+    }
+    set_faith = dhyana
+    set_culture = han
+    add_trait = immortal_ascension
+}

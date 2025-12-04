@@ -251,6 +251,15 @@ can_contract_disease_trigger = {
 
 	#Doesn't already have the trait
 	NOT = { has_trait = $DISEASE$ }
+	
+    NOR = {
+			has_trait = foundation_establishment
+			has_trait = core_formation
+			has_trait = nascent_soul
+			has_trait = spirit_severing
+			has_trait = dao_seeking
+			has_trait = immortal_ascension
+		  }
 
 	#Only get measles once
 	trigger_if = {

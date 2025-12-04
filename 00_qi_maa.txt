@@ -1,0 +1,295 @@
+﻿# standard costs
+@maa_buy_cost = 800
+@maa_low_maintenance_cost = 1.0
+@maa_high_maintenance_cost = 10.0
+
+thousand_qi_needles = {
+	type = archers
+	can_recruit = {
+		has_trait = qi_gathering
+	}
+	damage = 28
+	toughness = 45
+	pursuit = 18
+	screen = 30
+	siege_value = 0
+	siege_tier = 0
+	terrain_bonus = {
+		plains = { damage = 10 toughness = 8 }
+		drylands = { damage = 10 toughness = 8 }
+	}
+	counters = {
+		levies = 2.2
+		light_footmen = 2.0
+		archers = 1.8
+		skirmishers = 1.6
+		heavy_infantry = 1.2
+		pikemen = 1.4
+		heavy_cavalry = 0.9
+		light_cavalry = 1.5
+		archer_cavalry = 1.3
+		elephants = 0.7
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 0.2 }
+	high_maintenance_cost = { gold = 0.5 }
+	stack = 100
+	hired_stack_size = 100
+	ai_quality = { value = 0 }
+	icon = thousand_qi_needles
+}
+
+nine_heavens_sword_intent = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = foundation_establishment
+	}
+	damage = 3200
+	toughness = 2400
+	pursuit = 550
+	screen = 180
+	siege_value = 4
+	siege_tier = 1
+	terrain_bonus = {
+		plains = { damage = 4500 toughness = 900 }
+		desert = { damage = 4000 toughness = 700 }
+		desert_mountains = { damage = 4000 toughness = 700 }
+	}
+	counters = {
+		levies = 28
+		light_footmen = 25
+		archers = 20
+		skirmishers = 20
+		heavy_infantry = 18
+		pikemen = 15
+		heavy_cavalry = 12
+		light_cavalry = 20
+		archer_cavalry = 18
+		elephants = 10
+		siege_weapon = 12
+		thousand_qi_needles = 60
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 0.5 }
+	high_maintenance_cost = { gold = 1 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = nine_heavens_sword_intent
+}
+
+golden_core_flame_lotus = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = core_formation
+	}
+	damage = 14000
+	toughness = 11000
+	pursuit = 1400
+	screen = 500
+	siege_value = 4
+	siege_tier = 2
+	terrain_bonus = {
+		drylands = { damage = 14000 toughness = 4000 }
+		desert = { damage = 18000 toughness = 5000 }
+		plains = { damage = 12000 toughness = 3000 }
+	}
+	counters = {
+		levies = 90
+		light_footmen = 80
+		archers = 70
+		skirmishers = 70
+		heavy_infantry = 60
+		pikemen = 55
+		heavy_cavalry = 50
+		light_cavalry = 65
+		archer_cavalry = 60
+		elephants = 40
+		siege_weapon = 50
+		thousand_qi_needles = 250
+		nine_heavens_sword_intent = 140
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 1 }
+	high_maintenance_cost = { gold = 2 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = golden_core_flame_lotus
+}
+
+nascent_soul_phantom = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = nascent_soul
+	}
+	damage = 50000
+	toughness = 45000
+	pursuit = 4000
+	screen = 1800
+	siege_value = 6
+	siege_tier = 3
+	terrain_bonus = {
+		mountains = { pursuit = 6000 screen = 3000 }
+		hills = { damage = 25000 toughness = 15000 }
+		plains = { pursuit = 8000 }
+	}
+	counters = {
+		levies = 250
+		light_footmen = 220
+		archers = 200
+		skirmishers = 200
+		heavy_infantry = 180
+		pikemen = 180
+		heavy_cavalry = 160
+		light_cavalry = 220
+		archer_cavalry = 200
+		elephants = 140
+		siege_weapon = 180
+		thousand_qi_needles = 600
+		nine_heavens_sword_intent = 400
+		golden_core_flame_lotus = 300
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 5 }
+	high_maintenance_cost = { gold = 9 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = nascent_soul_phantom
+}
+
+heaven_severing_blade = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = spirit_severing
+	}
+	damage = 120000
+	toughness = 100000
+	pursuit = 6000
+	screen = 3000
+	siege_value = 8
+	siege_tier = 4
+	terrain_bonus = {
+		plains = { damage = 80000 toughness = 40000 }
+		hills = { damage = 70000 }
+		mountains = { damage = 60000 }
+	}
+	counters = {
+		levies = 500
+		light_footmen = 450
+		archers = 400
+		skirmishers = 400
+		heavy_infantry = 350
+		pikemen = 350
+		heavy_cavalry = 300
+		light_cavalry = 400
+		archer_cavalry = 350
+		elephants = 280
+		siege_weapon = 450
+		thousand_qi_needles = 1200
+		nine_heavens_sword_intent = 800
+		golden_core_flame_lotus = 700
+		nascent_soul_phantom = 550
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 5 }
+	high_maintenance_cost = { gold = 10 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = heaven_severing_blade
+}
+
+myriad_dao_suppression_domain = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = dao_seeking
+	}
+	damage = 300000
+	toughness = 250000
+	pursuit = 10000
+	screen = 7000
+	siege_value = 8
+	siege_tier = 4
+	terrain_bonus = {
+		plains = { damage = 150000 toughness = 100000 }
+		drylands = { damage = 150000 toughness = 100000 }
+		desert = { damage = 150000 toughness = 100000 }
+		hills = { damage = 150000 toughness = 100000 }
+		mountains = { damage = 150000 toughness = 100000 }
+		desert_mountains = { damage = 150000 toughness = 100000 }
+	}
+	counters = {
+		levies = 1000
+		light_footmen = 900
+		archers = 800
+		skirmishers = 800
+		heavy_infantry = 800
+		pikemen = 800
+		heavy_cavalry = 700
+		light_cavalry = 800
+		archer_cavalry = 750
+		elephants = 600
+		siege_weapon = 900
+		thousand_qi_needles = 2500
+		nine_heavens_sword_intent = 1600
+		golden_core_flame_lotus = 1400
+		nascent_soul_phantom = 1200
+		heaven_severing_blade = 1000
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 5 }
+	high_maintenance_cost = { gold = 10 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = myriad_dao_suppression_domain
+}
+
+heavenly_tribulation_descent = {
+	type = war_elephant
+	can_recruit = {
+		has_trait = immortal_ascension
+	}
+	damage = 800000
+	toughness = 700000
+	pursuit = 20000
+	screen = 15000
+	siege_value = 8
+	siege_tier = 4
+	terrain_bonus = {
+		plains = { damage = 400000 toughness = 300000 }
+		drylands = { damage = 400000 toughness = 300000 }
+		desert = { damage = 400000 toughness = 300000 }
+		hills = { damage = 400000 toughness = 300000 }
+		mountains = { damage = 400000 toughness = 300000 }
+		desert_mountains = { damage = 400000 toughness = 300000 }
+	}
+	counters = {
+		levies = 3000
+		light_footmen = 2800
+		archers = 2500
+		skirmishers = 2500
+		heavy_infantry = 2500
+		pikemen = 2500
+		heavy_cavalry = 2200
+		light_cavalry = 2500
+		archer_cavalry = 2300
+		elephants = 2000
+		siege_weapon = 3000
+		thousand_qi_needles = 8000
+		nine_heavens_sword_intent = 5000
+		golden_core_flame_lotus = 4500
+		nascent_soul_phantom = 4000
+		heaven_severing_blade = 3500
+		myriad_dao_suppression_domain = 3000
+	}
+	buy_cost = { gold = 999999 }
+	low_maintenance_cost = { gold = 5 }
+	high_maintenance_cost = { gold = 10 }
+	stack = 1
+	hired_stack_size = 1
+	ai_quality = { value = 0 }
+	icon = heavenly_tribulation_descent
+}
